@@ -24,7 +24,7 @@
         <td><c:out value = "${string2[3]}" escapeXml="false"/><br/></td>
 
     </tr>
-<c:set var="string3" value="${fn:substringAfter(string1, ',')}"/>
+<c:set var="string3" value="${fn:substringBefore(string1, ',')}"/>
 Final string:<br/>
 <c:out value = "${string3}" escapeXml="false"/>
 </body>
