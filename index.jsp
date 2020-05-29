@@ -23,7 +23,16 @@
         <td><c:out value = "${string2[2]}" escapeXml="false"/><br/></td>
         <td><c:out value = "${string2[3]}" escapeXml="false"/><br/></td>
 
-    </tr>
+ 
+    <c:if test = "${fn:startsWith(string, 'away')}">
+         <p>String starts with First</p>
+      </c:if>
+      
+     
+      <c:if test = "${fn:startsWith(string, 'Far Far')}">
+         <p>this is working</p>
+      </c:if>
+   
 <c:set var="string3" value="${fn:substringBefore(string1, ',')}"/>
 Final string:<br/>
 <c:out value = "${string3}" escapeXml="false"/>
